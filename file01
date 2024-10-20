@@ -7,3 +7,4 @@ edit
 git checkout <name of branch> - переходит на другую ветку
 git branch - показывает список веток
 git branch <name of branch> - создает ветку
+git branch -d <name of branch> - удаляет ветку
