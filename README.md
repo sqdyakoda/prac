@@ -1,4 +1,4 @@
-git diff <file> - показывает изменения в файле с последнего коммита
+<!-- git diff <file> - показывает изменения в файле с последнего коммита
 
 git restore <file> - возвращает файл в состояние последнего  коммита
 
@@ -14,4 +14,4 @@ git branch - показывает список веток
 
 git branch <name of branch> - создает ветку
 
-git branch -d <name of branch> - удаляет веткуls
+git branch -d <name of branch> - удаляет веткуls -->
