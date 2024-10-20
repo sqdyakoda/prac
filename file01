@@ -3,3 +3,4 @@ git restore <file> - возвращает файл в состояние пос�
 git checkout <commit id> - перемещает указатель HEAD на момент определенного коммита
 git config --global user.name "<name>"
 git config --global user.email "<email>"
+edit
