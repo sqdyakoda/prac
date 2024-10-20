@@ -4,3 +4,6 @@ git checkout <commit id> - перемещает указатель HEAD на м�
 git config --global user.name "<name>"
 git config --global user.email "<email>"
 edit
+git checkout <name of branch> - переходит на другую ветку
+git branch - показывает список веток
+git branch <name of branch> - создает ветку
