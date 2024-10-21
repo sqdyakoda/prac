@@ -3,3 +3,4 @@
 *.exe
 makefile
 .DS_Store
+hello.c
