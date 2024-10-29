@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <math.h>
-// void add(double *n, int size) {
-//     FILE* f = fopen("doubles.bin", "w");
-//     fwrite(n, sizeof(double), size, f);
-//     fclose(f);
-// }
+void add(double *n, int size) {
+    FILE* f = fopen("doubles.bin", "w");
+    fwrite(n, sizeof(double), size, f);
+    fclose(f);
+}
 int main(int argc, char *argv[]) {
-    // double arr[5] = {-11, 5, 12.5, 12.6, -100.8};
-    // add(arr, 5);
+    // double arr[5] = {-11, 5, 12.6, 12.5, -100.8};
+    // add(arr, 1);
+    
     FILE* f = fopen(argv[1], "r+");
     if (f == NULL)
         return 1;

@@ -12,8 +12,13 @@ char *removespace(char *str) {
     while (isspace(*str))
         str++;
     char *result = str;
-    while (!isspace(*str) && *str != '\0')
+    while (*str != '\0')
         str++;
+    str--;
+    while (isspace(*str)) {
+        str--;
+    }
+    str++;
     *str = '\0';
     return result;
 }

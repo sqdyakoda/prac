@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include <stdlib.h>
 typedef struct Node * List;
 struct Node {
@@ -12,13 +13,10 @@ void append(List *list, List element) {
         element->next = element;
         *list = element;
     } else {
-        List temp = (*list)->next;
-        while (temp->next != *list)
-            temp = temp->next;
-        temp->next = element;
-        element->prev = temp;
-        element->next = *list;
+        (*list)->prev->next = element;
+        element->prev = (*list)->prev;
         (*list)->prev = element;
+        element->next = *list;
     }
 }
 void Remove(List *list, List element) {
@@ -32,18 +30,18 @@ void Remove(List *list, List element) {
         element->next = element->prev = NULL;
     }
 }
-void print(List *list) {
-    if (*list == NULL) {
-        printf("\n");
-        return;
-    }   
-    List currelement = *list;
-    while (currelement != (*list)->prev) {
-        printf("%d ", currelement->value);
-        currelement = currelement->next;
-    }
-    printf("%d\n", currelement->value);
-}
+// void print(List *list) {
+//     if (*list == NULL) {
+//         printf("\n");
+//         return;
+//     }   
+//     List currelement = *list;
+//     while (currelement != (*list)->prev) {
+//         printf("%d ", currelement->value);
+//         currelement = currelement->next;
+//     }
+//     printf("%d\n", currelement->value);
+// }
 void reverseprint(List *list) {
     if (*list == NULL)
         return;   
@@ -66,7 +64,7 @@ void action(List *list) {
             currelement = currelement->next;
             Remove(list, temp);
             append(list, temp);
-        } else if (currelement->value < 100 && currelement->value % 2 == 1) {
+        } else if ((currelement->value < 100) && (abs(currelement->value % 2) == 1)) {
             temp = currelement;
             currelement = currelement->next;
             Remove(list, temp);
@@ -76,12 +74,10 @@ void action(List *list) {
     }
     if (currelement->value > 100) {
         temp = currelement;
-        currelement = currelement->next;
         Remove(list, temp);
         append(list, temp);
-    } else if (currelement->value < 100 && currelement->value % 2 == 1) {
+    } else if ((currelement->value < 100) && (abs(currelement->value % 2) == 1)) {
         temp = currelement;
-        currelement = currelement->next;
         Remove(list, temp);
         free(temp);
     }
