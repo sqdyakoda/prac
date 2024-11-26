@@ -1,11 +1,1 @@
-apple - яблоко  
-book  - книга  
-cat   - кот  
-dog   - собака  
-house - дом  
-tree  - дерево  
-artificial intellegent - искусственный интернет
-car   - машина  
-water - вода  
-sun   - солнце  
-moon  - луна  
+13 854

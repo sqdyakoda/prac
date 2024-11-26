@@ -33,6 +33,7 @@ void append(const char *str, Word *word) {
     strcpy(word->russian, removespace(rus));
 }
 int main(int argc, char *argv[]) {
+    printf("start working---\n");
     char line[maxlen + 2];
     FILE *f;
     if (argv[1] == NULL) {
