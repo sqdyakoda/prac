@@ -1,1 +1,3 @@
-13 854
+echo 1 2
+qqq
+uname
