@@ -1,0 +1,18 @@
+{
+  "towers": [
+    {"id": "A", "coordinates": {"x": 0, "y": 0}},
+    {"id": "B", "coordinates": {"x": 2, "y": 4}},
+    {"id": "C", "coordinates": {"x": 3, "y": 1}},
+    {"id": "D", "coordinates": {"x": 5, "y": 3}},
+    {"id": "E", "coordinates": {"x": 6, "y": 0}}
+  ],
+  "connections": [
+    {"from": "A", "to": "B"},
+    {"from": "A", "to": "C"},
+    {"from": "B", "to": "C"},
+    {"from": "B", "to": "D"},
+    {"from": "C", "to": "D"},
+    {"from": "C", "to": "E"},
+    {"from": "D", "to": "B"}
+  ]
+}
